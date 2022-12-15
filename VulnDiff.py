@@ -120,7 +120,6 @@ class DiffViewer(idaapi.Choose):
             modified = {}
             for item in diffedFunctions:
                 if item.checked == "*" or item.interesting == "*":
-                    # f.write(item)
                     modified[item.ea] = (item.checked, item.interesting)
             pickle.dump(modified, f, protocol=pickle.HIGHEST_PROTOCOL)
             print("Content Saved")
